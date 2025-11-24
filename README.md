@@ -1,19 +1,20 @@
-<h1 align="center">Your Paper Title Goes Here</h1>
+<h1 align="center">SuperQuadricOcc: Multi-Layer Gaussian Approximation of Superquadrics for Real-Time Self-Supervised Occupancy Estimation</h1>
 
 <p align="center">
-<strong>Author One</strong><sup>1</sup>, 
-<strong>Author Two</strong><sup>2</sup>, 
-<strong>Author Three</strong><sup>1</sup>
+<strong>Seamie Hayes</strong><sup>1,2</sup>, 
+<strong>Reenu Mohandas</strong><sup>1</sup>, 
+<strong>Tim Brophy</strong><sup>1</sup>
+<strong>Alexandre Boulch</strong><sup>3</sup>
+<strong>Ganesh Sistu</strong><sup>1</sup>
+<strong>Ciaran Eising</strong><sup>1,2</sup>
 </p>
 
 <p align="center">
-<sup>1</sup>Affiliation One &nbsp;&nbsp; <sup>2</sup>Affiliation Two
+<sup>1</sup> D²iCE Research Centre, University of Limerick &nbsp;&nbsp; <sup>2</sup>Taighde Éireann – Research Ireland &nbsp;&nbsp; <sup>3</sup>Valeo.ai
 </p>
 
 <p align="center">
-<a href="https://arxiv.org/abs/xxxx.xxxxx">[arXiv]</a> • 
-<a href="https://yourprojectpage.com">[Project Page]</a> • 
-<a href="assets/paper.pdf">[PDF]</a>
+<a href="https://arxiv.org/abs/2511.17361">[arXiv]</a>
 </p>
 
 
