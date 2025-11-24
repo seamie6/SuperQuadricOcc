@@ -18,7 +18,7 @@
 </p>
 
 
-<img src="assets/teaser.png" width="100%">
+<img src="assets/superquadricocc.jpg" width="100%">
 
 ## Abstract
 Short 3–5 sentence summary. Keep it readable.
