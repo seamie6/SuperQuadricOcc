@@ -14,7 +14,9 @@
 </p>
 
 <p align="center">
-<a href="https://arxiv.org/abs/2511.17361">[arXiv]</a>
+<a href="https://arxiv.org/abs/2511.17361">
+  <img src="https://img.shields.io/badge/arXiv-2511.17361-b31b1b.svg">
+</a>
 </p>
 
 <img src="assets/superquadricocc2.jpg" width="100%">
