@@ -1,13 +1,14 @@
 <h1 align="center">SuperQuadricOcc: Multi-Layer Gaussian Approximation of Superquadrics for Real-Time Self-Supervised Occupancy Estimation</h1>
 
 <p align="center">
-<strong>Seamie Hayes</strong><sup>1,2</sup>, 
-<strong>Reenu Mohandas</strong><sup>1</sup>, 
-<strong>Tim Brophy</strong><sup>1</sup>,
-<strong>Alexandre Boulch</strong><sup>3</sup>,
-<strong>Ganesh Sistu</strong><sup>1</sup>,
-<strong>Ciaran Eising</strong><sup>1,2</sup>
+  <a href="https://scholar.google.com/citations?user=3fffnjYAAAAJ&hl=en&authuser=1" target="_blank"><strong>Seamie Hayes</strong></a><sup>1,2</sup>,
+  <strong>Reenu Mohandas</strong><sup>1</sup>, 
+  <a href="https://scholar.google.com/citations?user=dDgm87sAAAAJ&hl=en&authuser=1" target="_blank"><strong>Tim Brophy</strong></a><sup>1</sup>,
+  <a href="https://scholar.google.com/citations?user=iJ3qFGAAAAAJ&hl=en&authuser=1" target="_blank"><strong>Alexandre Boulch</strong></a><sup>3</sup>,
+  <a href="https://scholar.google.com/citations?user=356ahmwAAAAJ&hl=en&authuser=1" target="_blank"><strong>Ganesh Sistu</strong></a><sup>1</sup>,
+  <a href="https://scholar.google.com/citations?user=aH6w8VcAAAAJ&hl=en&authuser=1" target="_blank"><strong>Ciaran Eising</strong></a><sup>1,2</sup>
 </p>
+
 
 <p align="center">
 <sup>1</sup> D²iCE Research Centre, University of Limerick &nbsp;&nbsp; <sup>2</sup>Taighde Éireann – Research Ireland &nbsp;&nbsp; <sup>3</sup>Valeo.ai
