@@ -1,17 +1,18 @@
 <h1 align="center">SuperQuadricOcc: Multi-Layer Gaussian Approximation of Superquadrics for Real-Time Self-Supervised Occupancy Estimation</h1>
 
 <p align="center">
-  <a href="https://scholar.google.com/citations?user=3fffnjYAAAAJ&hl=en&authuser=1" target="_blank"><strong>Seamie Hayes</strong></a><sup>1,2</sup>,
-  <strong>Reenu Mohandas</strong><sup>1</sup>, 
-  <a href="https://scholar.google.com/citations?user=dDgm87sAAAAJ&hl=en&authuser=1" target="_blank"><strong>Tim Brophy</strong></a><sup>1</sup>,
-  <a href="https://scholar.google.com/citations?user=iJ3qFGAAAAAJ&hl=en&authuser=1" target="_blank"><strong>Alexandre Boulch</strong></a><sup>3</sup>,
-  <a href="https://scholar.google.com/citations?user=356ahmwAAAAJ&hl=en&authuser=1" target="_blank"><strong>Ganesh Sistu</strong></a><sup>1</sup>,
-  <a href="https://scholar.google.com/citations?user=aH6w8VcAAAAJ&hl=en&authuser=1" target="_blank"><strong>Ciaran Eising</strong></a><sup>1,2</sup>
+  <a href="https://scholar.google.com/citations?user=3fffnjYAAAAJ&hl=en"><strong>Seamie Hayes</strong></a><sup>1,2</sup>,
+  <a href="https://scholar.google.com/citations?user=iJ3qFGAAAAAJ&hl=en"><strong>Alexandre Boulch</strong></a><sup>3</sup>,
+  <a href="https://scholar.google.com/citations?user=HTfERCsAAAAJ&hl=en"><strong>Andrei Bursuc</strong></a><sup>3</sup>,
+  <a href="https://scholar.google.com/citations?user=Ku6jvh0AAAAJ&hl=en"><strong>Reenu Mohandas</strong></a><sup>1</sup>, <br>
+  <a href="https://scholar.google.com/citations?user=dDgm87sAAAAJ&hl=en"><strong>Tim Brophy</strong></a><sup>1</sup>,
+  <a href="https://scholar.google.com/citations?user=356ahmwAAAAJ&hl=en"><strong>Ganesh Sistu</strong></a><sup>1</sup>,
+  <a href="https://scholar.google.com/citations?user=aH6w8VcAAAAJ&hl=en"><strong>Ciaran Eising</strong></a><sup>1,2</sup>
 </p>
 
 
 <p align="center">
-<sup>1</sup> D²iCE Research Centre, University of Limerick &nbsp;&nbsp; <sup>2</sup>Taighde Éireann – Research Ireland &nbsp;&nbsp; <sup>3</sup>Valeo.ai
+<sup>1</sup> D²iCE Research Centre, University of Limerick &nbsp;&nbsp; <sup>2</sup> Taighde Éireann – Research Ireland &nbsp;&nbsp; <sup>3</sup> Valeo.ai
 </p>
 
 <p align="center">
@@ -25,7 +26,7 @@
 Video visualizations are provided in the ```assets/``` folder
 
 ## Abstract
-_Semantic occupancy estimation enables comprehensive scene understanding for automated driving, providing dense spatial and semantic information essential for perception and planning. While Gaussian representations have been widely adopted in self-supervised occupancy estimation, the deployment of a large number of Gaussian primitives drastically increases memory requirements and is not suitable for real-time inference. In contrast, superquadrics permit reduced primitive count and lower memory requirements due to their diverse shape set. However, implementation into a self-supervised occupancy model is nontrivial due to the absence of a superquadric rasterizer to enable model supervision. Our proposed method, SuperQuadricOcc, employs a superquadric-based scene representation. By leveraging a multi-layer icosphere-tessellated Gaussian approximation of superquadrics, we enable Gaussian rasterization for supervision during training. On the Occ3D dataset, SuperQuadricOcc achieves a 75\% reduction in memory footprint, 124\% faster inference, and a 5.9\% improvement in mIoU compared to previous Gaussian-based methods, without the use of temporal labels. To our knowledge, this is the first occupancy model to enable real-time inference while maintaining competitive performance. The use of superquadrics reduces the number of primitives required for scene modeling by 84\% relative to Gaussian-based approaches. Finally, evaluation against prior methods is facilitated by our fast superquadric voxelization module._
+_Self-supervision for semantic occupancy estimation is appealing as it removes the labour-intensive manual annotation, thus allowing one to scale to larger autonomous driving datasets. Superquadrics offer an expressive shape family very suitable for this task, yet their deployment in a self-supervised setting has been hindered by the lack of efficient rendering methods to bridge the 3D scene representation and 2D training pseudo-labels. To address this, we introduce SuperQuadricOcc, the first self-supervised occupancy model to leverage superquadrics for scene representation. To overcome the rendering limitation, we propose a real-time volume renderer that preserves the fidelity of the superquadric shape during rendering. It relies on spatial superquadric–voxel indexing, restricting each ray sample to query only nearby superquadrics, thereby greatly reducing memory usage and computational cost. Using drastically fewer primitives than previous Gaussian-based methods, SuperQuadricOcc achieves state-of-the-art performance on the Occ3D-nuScenes dataset, while running at real-time inference speeds with substantially reduced memory footprint._
 
 ## Code
 Our code will be released soon
@@ -37,13 +38,14 @@ I would like to thank the authors of the following open-source projects:<br>
 [GaussianFlowOcc](https://github.com/boschresearch/GaussianFlowOcc)<br>
 [PartGS](https://github.com/zhirui-gao/PartGS)<br>
 [QuadricFormer](https://github.com/zuosc19/QuadricFormer)<br>
+[PyTorch3D](https://github.com/facebookresearch/pytorch3d)<br>
 
 ## Citation
 ```
-@misc{hayes2025superquadricoccmultilayergaussianapproximation,
-      title={SuperQuadricOcc: Multi-Layer Gaussian Approximation of Superquadrics for Real-Time Self-Supervised Occupancy Estimation}, 
-      author={Seamie Hayes and Reenu Mohandas and Tim Brophy and Alexandre Boulch and Ganesh Sistu and Ciaran Eising},
-      year={2025},
+@misc{hayes2026superquadricoccrealtimeselfsupervisedsemantic,
+      title={SuperQuadricOcc: Real-Time Self-Supervised Semantic Occupancy Estimation with Superquadric Volume Rendering}, 
+      author={Seamie Hayes and Alexandre Boulch and Andrei Bursuc and Reenu Mohandas and Ganesh Sistu and Tim Brophy and Ciaran Eising},
+      year={2026},
       eprint={2511.17361},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
