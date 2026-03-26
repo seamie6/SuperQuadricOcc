@@ -4,9 +4,9 @@
   <a href="https://scholar.google.com/citations?user=3fffnjYAAAAJ&hl=en"><strong>Seamie Hayes</strong></a><sup>1,2</sup>,
   <a href="https://scholar.google.com/citations?user=iJ3qFGAAAAAJ&hl=en"><strong>Alexandre Boulch</strong></a><sup>3</sup>,
   <a href="https://scholar.google.com/citations?user=HTfERCsAAAAJ&hl=en"><strong>Andrei Bursuc</strong></a><sup>3</sup>,
-  <a href="https://scholar.google.com/citations?user=Ku6jvh0AAAAJ&hl=en"><strong>Reenu Mohandas</strong></a><sup>1</sup>, <br>
+  <a href="https://scholar.google.com/citations?user=Ku6jvh0AAAAJ&hl=en"><strong>Reenu Mohandas</strong></a><sup>1</sup>,<br>
+   <a href="https://scholar.google.com/citations?user=356ahmwAAAAJ&hl=en"><strong>Ganesh Sistu</strong></a><sup>1</sup>,
   <a href="https://scholar.google.com/citations?user=dDgm87sAAAAJ&hl=en"><strong>Tim Brophy</strong></a><sup>1</sup>,
-  <a href="https://scholar.google.com/citations?user=356ahmwAAAAJ&hl=en"><strong>Ganesh Sistu</strong></a><sup>1</sup>,
   <a href="https://scholar.google.com/citations?user=aH6w8VcAAAAJ&hl=en"><strong>Ciaran Eising</strong></a><sup>1,2</sup>
 </p>
 
