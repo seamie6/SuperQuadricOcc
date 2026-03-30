@@ -10,18 +10,7 @@
   <title>SuperQuadricOcc: Real-Time Self-Supervised Semantic Occupancy Estimation with Superquadric Volume Rendering</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  <!--  removed -->
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -33,7 +22,6 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -43,54 +31,14 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">SuperQuadricOcc: Real-Time Self-Supervised Semantic Occupancy Estimation with Superquadric Volume Rendering</h1>
-          <div class="is-size-5 publication-authors">
+          <h1 class="title is-3 publication-title">SuperQuadricOcc: Real-Time Self-Supervised Semantic Occupancy Estimation with Superquadric Volume Rendering</h1>
+          <div class="is-size-6 publication-authors">
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=3fffnjYAAAAJ&hl=en">Seamie Hayes</a><sup>1,2</sup>,</span>
             <span class="author-block">
@@ -112,7 +60,7 @@
             </span>
           </div>
 
-          <div class="is-size-5 publication-authors">
+          <div class="is-size-6 publication-authors">
             <span class="author-block"><sup>1</sup>D²iCE Research Centre, University of Limerick,</span>
             <span class="author-block"><sup>2</sup>Taighde Éireann - Research Ireland</span>
             <span class="author-block"><sup>3</sup>Valeo.ai</span>
@@ -121,7 +69,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/pdf/2511.17361"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -129,10 +77,11 @@
                   </span>
                   <span>Paper</span>
                 </a>
-              </span>
+              </span> -->
+
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2511.17361"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-small is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -143,7 +92,7 @@
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/seamie6/SuperQuadricOcc"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-small is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
@@ -160,8 +109,28 @@
   </div>
 </section>
 
+<section class="section pt-1 pb-2" id="overview">
+  <div class="container is-max-desktop content">
+    <!-- <h2 class="title">Model Architecture</h2>
+    <p> To begin, the transformer network refines superquadric means \( S_M \) and features \( S_F \), which are
+      eventually
+      transformed into full primitives for rendering. In SuperQuadricOcc-Render, following preliminary construction, we
+      iterate over each ray sample \( r_j \), and query the spatial indexing tensors \( \mathbf{V}_{sq} \), \(
+      \mathbf{V}_{n} \), \( \mathbf{V}_{f} \) to obtain the list of superquadrics \( \mathcal{Q}(v_{r_j}) \). We then
+      compute the ray sample values \( \alpha_{r_j} \), \( \mathbf{s}_{r_j} \), and perform alpha compositing to produce
+      the
+      final semantic render \( \hat{S} \) and depth render \( \hat{D} \). During evaluation, superquadrics \(
+      \mathcal{S} \)
+      are voxelized. </p> -->
+    <figure class="image" style="margin-top: 0.5rem;">
+      <img src="static/images/hook.png" alt="Model Architecture">
+    </figure>
 
-<section class="section">
+  </div>
+</section>
+
+
+<section class="section" style="background: #f5f5f5;">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -191,15 +160,15 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">Model Architecture</h2>
-      <p> The transformer network refines superquadric means \( S_M \) and features \( S_F \), which are eventually
-        transformed into full primitives for rendering. In \(\text{render}(\cdot)\), following preliminary construction, we
+      <p> To begin, the transformer network refines superquadric means \( S_M \) and features \( S_F \), which are eventually
+        transformed into full primitives for rendering. In SuperQuadricOcc-Render, following preliminary construction, we
         iterate over each ray sample \( r_j \), and query the spatial indexing tensors \( \mathbf{V}_{sq} \), \(
         \mathbf{V}_{n} \), \( \mathbf{V}_{f} \) to obtain the list of superquadrics \( \mathcal{Q}(v_{r_j}) \). We then
         compute the ray sample values \( \alpha_{r_j} \), \( \mathbf{s}_{r_j} \), and perform alpha compositing to produce the
         final semantic render \( \hat{S} \) and depth render \( \hat{D} \). During evaluation, superquadrics \( \mathcal{S} \)
         are voxelized. </p>
     <figure class="image">
-      <img src="static/images/model_new.jpg" alt="Model Architecture">
+      <img src="static/images/model_new.png" alt="Model Architecture">
     </figure>
 
   </div>
@@ -208,39 +177,66 @@
   <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-3">Video Visualisations</h2>
+      <p>
+        For semantic occupancy estimation, SuperQuadricOcc produces coherent predictions largely due to the use of
+        superquadrics, which enable a more efficient scene representation. The model accurately detects both nearby and distant
+        objects through temporal flow, addressing the bias toward regions close to the camera that affected previous methods.
+        Furthermore, it delivers these predictions at a real-time speed of 21 FPS.
+      </p>
+    </div>
 
-      <!-- <div class="content has-text-centered"> -->
-        <p> 
-          SuperQuadricOcc demonstrates strong semantic occupancy, correctly detecting closeby and far away objects, something previous models struggled with
-          due to biased supervision for regions close to the camera view. For densely packed scenes, the model demonstrates good performance.
-        </p>
+    <div style="max-width: 1200px; margin: 1.25rem auto 2rem auto;">
+      <video controls style="width: 100%; display: block;">
+        <source src="static/video/voxel.mov" type="video/quicktime">
+      </video>
+    </div>
 
-        <video controls style="width: 100%; max-width: 800px; margin-bottom: 20px;">
-          <source src="static/video/voxel.mov" type="video/quicktime">
-        </video>
+    <div class="container is-max-desktop">
+      <p>
+        For 2D depth and semantic estimation, SuperQuadricOcc coupled with SQOcc-R produces accurate renderings. Since
+        supervision occurs in 2D space, the method remains particularly accurate in dense scenes containing many vehicles and
+        other objects. SQOcc-R delivers these renders at 58 FPS across all six cameras.
+      </p>
+    </div>
 
-        <p>
-          For depth and semantic rendering, the model demonstrated good performance as this is the models supervision space. SQOcc-R volume renderer provides
-          accurate and timely renders.
-        </p>
-
-        <video controls style="width: 100%; max-width: 800px;">
-          <source src="static/video/depth_sem.mov" type="video/quicktime">
-        </video>
-
-      <!-- </div> -->
+    <div style="max-width: 1200px; margin: 1.25rem auto 2rem auto;">
+      <video controls style="width: 100%; display: block;">
+        <source src="static/video/depth_sem.mov" type="video/quicktime">
+      </video>
     </div>
   </section>
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">Results</h2>
-          <p>
-            SuperQuadricOcc demonstrated good performance
-          </p>
+  
+      <div class="subsection" style="margin-bottom: 2rem;">
+        <h3 style="font-size: 1.25rem;">Main Results</h3>
+        <p>
+          On the Occ3D-nuScenes dataset, SuperQuadricOcc achieves state-of-the-art mIoU, surpassing previous methods based on
+          voxel or Gaussian scene representations. Furthermore, the superquadric representation enables real-time inference with
+          low memory usage of just 0.70 GB, more than doubling FPS while halving memory usage compared to prior methods. For the
+          RayIoU metric, we again achieve state-of-the-art results, which is highlighted in the paper.
+        </p>
+        <figure class="image">
+          <img src="static/images/results.png" alt="Quantitative Results">
+        </figure>
+      </div>
+  
+      <div class="subsection">
+        <h3 style="font-size: 1.25rem;">Depth Estimation</h3>
+        <p>
+          For depth estimation, we compare our novel rendering method, SQOcc-R, against three other superquadric rendering
+          approaches as well as existing depth estimation models. SQOcc-R outperforms the other superquadric renderers due to the
+          accuracy of volume rendering, which avoids lossy approximations of the superquadric shape. Furthermore, our method
+          achieves state-of-the-art results on the Abs Rel and Sq Rel metrics across all compared methods, highlighting the
+          effectiveness of superquadrics for scene representation and downstream tasks.
+        </p>
           <figure class="image">
-            <img src="static/images/results.png" alt="Model Architecture">
+            <img src="static/images/depth.png" alt="Qualitative Results" style="width:80%; height: auto;">
           </figure>
+      </div>
+  
     </div>
   </section>
 
@@ -258,35 +254,12 @@
   </div>
 </section>
 
-
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
-        </div>
-      </div>
+      Website built upon <a href="https://github.com/nerfies/nerfies.github.io">&nbsp;Nerfies</a>.
+      Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">&nbsp;CC BY-SA 4.0
+        License</a>.
     </div>
   </div>
 </footer>
