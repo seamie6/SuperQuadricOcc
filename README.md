@@ -21,7 +21,7 @@
 
 </div>
 
-<img src="assets/superquadricocc.png" width="100%">
+<img src="assets/superquadricocc.jpg" width="100%">
 
 Video visualizations are provided in the ```assets/video``` folder
 
