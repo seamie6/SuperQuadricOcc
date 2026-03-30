@@ -1,6 +1,8 @@
-<h1 align="center">SuperQuadricOcc: Real-Time Self-Supervised Semantic Occupancy Estimation with Superquadric Volume Rendering</h1>
+<div align="center">
 
-<p align="center">
+<h1>SuperQuadricOcc: Real-Time Self-Supervised Semantic Occupancy Estimation with Superquadric Volume Rendering</h1>
+
+<p>
   <a href="https://scholar.google.com/citations?user=3fffnjYAAAAJ&hl=en"><strong>Seamie Hayes</strong></a><sup>1,2</sup>,
   <a href="https://scholar.google.com/citations?user=iJ3qFGAAAAAJ&hl=en"><strong>Alexandre Boulch</strong></a><sup>3</sup>,
   <a href="https://scholar.google.com/citations?user=HTfERCsAAAAJ&hl=en"><strong>Andrei Bursuc</strong></a><sup>3</sup>,
@@ -10,16 +12,14 @@
   <a href="https://scholar.google.com/citations?user=aH6w8VcAAAAJ&hl=en"><strong>Ciaran Eising</strong></a><sup>1,2</sup>
 </p>
 
-
-<p align="center">
+<p>
 <sup>1</sup> D²iCE Research Centre, University of Limerick &nbsp;&nbsp; <sup>2</sup> Taighde Éireann – Research Ireland &nbsp;&nbsp; <sup>3</sup> Valeo.ai
 </p>
 
-<p align="center">
-<a href="https://arxiv.org/abs/2511.17361">
-  <img src="https://img.shields.io/badge/arXiv-2511.17361-b31b1b.svg">
-</a>
-</p>
+[![Project page](https://img.shields.io/badge/project%20page-seamie6.github.io%2FSuperQuadricOcc-blue)](https://seamie6.github.io/SuperQuadricOcc/)
+[![arXiv](https://img.shields.io/badge/arXiv-2511.17361-red?logo=arXiv&logoColor=red)](https://arxiv.org/abs/2511.17361)
+
+</div>
 
 <img src="assets/superquadricocc.png" width="100%">
 
