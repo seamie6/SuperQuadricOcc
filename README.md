@@ -213,6 +213,10 @@ python tools/eval_depth.py --pred-dir ./saved_files/superquadricocc/depth --max-
 
 </details>
 
+### Model Checkpoint
+Model checkpoint will be released soon
+
+
 ## Acknowledgement
 This publication has emanated from research conducted with the financial support of Taighde Éireann – Research Ireland under Grant number 18/CRT/6049. For the purpose of Open Access, the author has applied a CC BY public copyright licence to any Author Accepted Manuscript version arising from this submission.
 

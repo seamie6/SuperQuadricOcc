@@ -3,13 +3,6 @@
 #include <cuda_runtime.h>
 #include "include/common.cuh"
 
-// Inputs:
-//  ray_xyz   [R,N,3] float
-//  ray_vox   [R,N]   int32  (flat voxel id per sample; invalid can be -1 or out-of-range)
-//  ray_t     [R,N]   float  (ray_bundle.lengths per sample)
-// Outputs:
-//  out_sem   [R,C]
-//  out_depth [R]
 __global__ void sqocc_render_kernel(
     const float* __restrict__ ray_xyz,
     const float* __restrict__ ray_t,
@@ -43,7 +36,7 @@ __global__ void sqocc_render_kernel(
 
   float depth_acc = 0.0f;
 
-  // Transmittance (exclusive product). Match your Python: (1+eps) - alpha.
+  // Transmittance 
   float T = 1.0f;
   const float eps = 1e-10f;
 

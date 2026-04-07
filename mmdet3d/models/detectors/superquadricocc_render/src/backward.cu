@@ -3,6 +3,7 @@
 #include <cuda_runtime.h>
 #include "include/common.cuh"
 
+// Superquadric contribution function
 static inline __device__ float contrib_superquad(
     float x, float y, float z,
     float a, float b, float c,
@@ -81,7 +82,6 @@ __global__ void sqocc_render_backward_kernel(
   float alpha[MAX_N];
   float dot_sem_s[MAX_N]; // sum_c g_sem[c] * sem_s[c]
 
-  // FOR OLD ALPHA CODE
   unsigned char unclamped_mask[MAX_N]; // 1 if 0<alpha_s<1
 
   float T = 1.0;
@@ -141,7 +141,6 @@ __global__ void sqocc_render_backward_kernel(
       }
     }
 
-    // OLD ALPHA CODE
     const float a_clamped = clampf(alpha_s, 0.0, 1.0);
     alpha[j] = a_clamped;
     unclamped_mask[j] = (alpha_s > 0.0 && alpha_s < 1.0) ? 1 : 0;
@@ -152,7 +151,6 @@ __global__ void sqocc_render_backward_kernel(
     for (int cc = 0; cc < C_SEM; ++cc) dotv += g_sem[cc] * sem_s[cc];
     dot_sem_s[j] = dotv;
 
-    // OLD ALPHA CODE
     T *= ((1.0 + epsT) - a_clamped);
   }
 
@@ -173,7 +171,6 @@ __global__ void sqocc_render_backward_kernel(
     gT += gT_next * (1.0 - alpha[j]);
     ga += gT_next * (-Tj[j]);
 
-    // OLD ALPHA CODE
     g_alpha_s[j] = unclamped_mask[j] ? ga : 0.0;
 
     gT_next = gT;
@@ -275,8 +272,6 @@ __global__ void sqocc_render_backward_kernel(
 
       // contrib = exp(-f) => df = -g_contrib * contrib
       const float g_f = (-g_contrib) * contrib;
-
-      // Now differentiate f = xy + zz
 
       // zz = Az^r
       // dzz/dAz = r*Az^(r-1), dzz/dr = zz*log(Az)
