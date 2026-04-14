@@ -214,7 +214,7 @@ python tools/eval_depth.py --pred-dir ./saved_files/superquadricocc/depth --max-
 </details>
 
 ### Model Checkpoint
-Model checkpoint will be released soon
+Check our [releases](https://github.com/seamie6/SuperQuadricOcc/releases) to download the checkpoint file `epoch_18_ema.pth` for evaluation.
 
 
 ## Acknowledgement
