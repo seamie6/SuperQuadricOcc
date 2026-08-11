@@ -40,11 +40,11 @@
           <h1 class="title is-3 publication-title">SuperQuadricOcc: Real-Time Self-Supervised Semantic Occupancy Estimation with Superquadric Volume Rendering</h1>
           <div class="is-size-6 publication-authors">
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=3fffnjYAAAAJ&hl=en">Seamie Hayes</a><sup>1,2</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=3fffnjYAAAAJ&hl=en">Seamie Hayes</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=iJ3qFGAAAAAJ&hl=en">Alexandre Boulch</a><sup>3</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=iJ3qFGAAAAAJ&hl=en">Alexandre Boulch</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=HTfERCsAAAAJ&hl=en">Andrei Bursuc</a><sup>3</sup>,
+              <a href="https://scholar.google.com/citations?user=HTfERCsAAAAJ&hl=en">Andrei Bursuc</a><sup>2</sup>,
             </span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=Ku6jvh0AAAAJ&hl=en">Reenu Mohandas</a><sup>1</sup>,
@@ -56,14 +56,13 @@
               <a href="https://scholar.google.com/citations?user=dDgm87sAAAAJ&hl=en">Tim Brophy</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=aH6w8VcAAAAJ&hl=en">Ciaran Eising</a><sup>1,2</sup>
+              <a href="https://scholar.google.com/citations?user=aH6w8VcAAAAJ&hl=en">Ciaran Eising</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-6 publication-authors">
-            <span class="author-block"><sup>1</sup>D²iCE Research Centre, University of Limerick,</span>
-            <span class="author-block"><sup>2</sup>Taighde Éireann - Research Ireland</span>
-            <span class="author-block"><sup>3</sup>Valeo.ai</span>
+            <span class="author-block"><sup>1</sup>University of Limerick,</span>
+            <span class="author-block"><sup>2</sup>Valeo.ai</span>
           </div>
 
           <div class="column has-text-centered">
@@ -141,13 +140,14 @@
           Self-supervision for semantic occupancy estimation is appealing as it removes the labour-intensive manual annotation,
           thus allowing one to scale to larger autonomous driving datasets. Superquadrics offer an expressive shape family very
           suitable for this task, yet their deployment in a self-supervised setting has been hindered by the lack of efficient
-          rendering methods to bridge the 3D scene representation and 2D training pseudo-labels. To address this, we introduce
+          rendering methods to bridge the 3D scene representation with 2D training pseudo-labels. To address this, we introduce
           SuperQuadricOcc, the first self-supervised occupancy model to leverage superquadrics for scene representation. To
           overcome the rendering limitation, we propose a real-time volume renderer that preserves the fidelity of the
           superquadric shape during rendering. It relies on spatial superquadric–voxel indexing, restricting each ray sample to
           query only nearby superquadrics, thereby greatly reducing memory usage and computational cost. Using drastically fewer
-          primitives than previous Gaussian-based methods, SuperQuadricOcc achieves state-of-the-art performance on the
-          Occ3D-nuScenes dataset, while running at real-time inference speeds with substantially reduced memory footprint.
+          primitives than prior Gaussian-based methods, SuperQuadricOcc achieves state-of-the-art RayIoU on Occ3D-nuScenes with
+          real-time inference and a substantially reduced memory footprint, while also outperforming Gaussian-based baselines on
+          downstream occupancy forecasting and trajectory estimation.
           </p>
         </div>
       </div>
@@ -211,29 +211,28 @@
       <h2 class="title">Results</h2>
   
       <div class="subsection" style="margin-bottom: 2rem;">
-        <h3 style="font-size: 1.25rem;">Main Results</h3>
+        <h3 style="font-size: 1.25rem;">Semantic Occupancy Estimation</h3>
         <p>
-          On the Occ3D-nuScenes dataset, SuperQuadricOcc achieves state-of-the-art mIoU, surpassing previous methods based on
-          voxel or Gaussian scene representations. Furthermore, the superquadric representation enables real-time inference with
-          low memory usage of just 0.70 GB, more than doubling FPS while halving memory usage compared to prior methods. For the
-          RayIoU metric, we again achieve state-of-the-art results, which is highlighted in the paper.
+          On the Occ3D-nuScenes and OpenOccv2 datasets, SuperQuadricOcc surpasses previous methods based on
+          voxel or Gaussian scene representations on both mIoU and RayIoU metrics, displaying the methods ability
+          to accurately capture the scene geometry and semantics.Furthermore, the superquadric representation enables real-time inference with
+          low memory usage of just 0.70 GB, more than doubling FPS while halving memory usage compared to prior methods.
         </p>
         <figure class="image">
-          <img src="static/images/results.png" alt="Quantitative Results">
+          <img src="static/images/results.png" alt="Quantitative Results" style="width:100%; height: auto;">
         </figure>
       </div>
   
       <div class="subsection">
-        <h3 style="font-size: 1.25rem;">Depth Estimation</h3>
+        <h3 style="font-size: 1.25rem;">Downstream Tasks</h3>
         <p>
-          For depth estimation, we compare our novel rendering method, SQOcc-R, against three other superquadric rendering
-          approaches as well as existing depth estimation models. SQOcc-R outperforms the other superquadric renderers due to the
-          accuracy of volume rendering, which avoids lossy approximations of the superquadric shape. Furthermore, our method
-          achieves state-of-the-art results on the Abs Rel and Sq Rel metrics across all compared methods, highlighting the
-          effectiveness of superquadrics for scene representation and downstream tasks.
+          For occupancy forecasting and trajectory estimation, SuperQuadricOcc outperforms the Gaussian-based
+          GaussianFlowOcc, demonstrating the effectiveness of the superquadric representation. Namely, for trajectory estimation, the compactness of
+          superquadrics permits less collisions (CR metric), suggesting that the compact superquadric representation better preserves temporally useful free-space and object-extent
+          structure than a larger set of local Gaussian primitives.
         </p>
           <figure class="image">
-            <img src="static/images/depth.png" alt="Qualitative Results" style="width:80%; height: auto;">
+            <img src="static/images/downstream.png" alt="Qualitative Results" style="width:100%; height: auto;">
           </figure>
       </div>
   
@@ -244,12 +243,15 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{hayes2025superquadricocc,
-    title={SuperQuadricOcc: Multi-Layer Gaussian Approximation of Superquadrics for Real-Time Self-Supervised Occupancy
-    Estimation},
-    author={Hayes, Seamie and Mohandas, Reenu and Brophy, Tim and Boulch, Alexandre and Sistu, Ganesh and Eising, Ciaran},
-    journal={arXiv preprint arXiv:2511.17361},
-    year={2025}
+    <pre><code>@misc{hayes2026superquadricoccrealtimeselfsupervisedsemantic,
+    title={SuperQuadricOcc: Real-Time Self-Supervised Semantic Occupancy Estimation with Superquadric Volume Rendering},
+    author={Seamie Hayes and Alexandre Boulch and Andrei Bursuc and Reenu Mohandas and Ganesh Sistu and Tim Brophy and
+    Ciaran Eising},
+    year={2026},
+    eprint={2511.17361},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2511.17361},
     }</code></pre>
   </div>
 </section>
